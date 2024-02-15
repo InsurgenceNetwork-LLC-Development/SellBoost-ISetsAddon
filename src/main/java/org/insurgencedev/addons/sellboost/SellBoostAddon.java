@@ -17,7 +17,7 @@ public class SellBoostAddon extends InsurgenceSetsAddon {
             registerEvent(new DeluxeSellWandsListener());
         }
 
-        if (Common.doesPluginExist("EconomyShopGUI")) {
+        if (Common.doesPluginExist("EconomyShopGUI") || Common.doesPluginExist("EconomyShopGUI-Premium")) {
             registerEvent(new EconomyShopGUIListener());
         }
 

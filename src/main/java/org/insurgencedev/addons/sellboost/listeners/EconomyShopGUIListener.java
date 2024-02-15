@@ -9,6 +9,10 @@ public final class EconomyShopGUIListener implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     private void onSell(PreTransactionEvent event) {
+        if (!event.getTransactionType().getMode().equalsIgnoreCase("sold")) {
+            return;
+        }
+
         AddonUtil.getMulti(event.getPlayer(), (found, multi) -> {
             if (found) {
                 event.setPrice(AddonUtil.calculateAmount(event.getPrice(), multi));
