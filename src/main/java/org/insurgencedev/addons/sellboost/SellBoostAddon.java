@@ -52,5 +52,17 @@ public class SellBoostAddon extends InsurgenceSetsAddon {
 //        if (Common.doesPluginExist("VoidChest")) {
 //            registerEvent(new VoidChestListener());
 //        }
+
+        if (isSupported("ZithiumCollectors")) {
+            registerEvent(new ZithiumCollectorListener());
+        }
+
+        if (isSupported("Sellwand")) {
+            registerEvent(new SellwandListener());
+        }
+    }
+
+    private boolean isSupported(String pluginName) {
+        return Common.doesPluginExist(pluginName) && MyConfig.shouldBoost(pluginName);
     }
 }

@@ -109,6 +109,20 @@
             <version>1.18.26</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>zithium</groupId>
+            <artifactId>zithiumcollectors</artifactId>
+            <version>LATEST</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/libs/ZithiumCollectorsAPI-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>sellwands</groupId>
+            <artifactId>sellwand</artifactId>
+            <version>LATEST</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/libs/sellwand-1.5.8-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>
